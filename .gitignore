@@ -1,0 +1,8 @@
+/node_modules
+/dev-nodes
+/dist
+Readme first use.txt
+npm-debug.log
+.DS_Store
+
+

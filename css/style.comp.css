@@ -1,0 +1,246 @@
+@charset "UTF-8";
+/*
+COLORS
+
+Primary: #eb2f64
+Primary light: #FF3366
+Primary dark: #BA265D
+
+Grey light 1: #faf9f9
+Grey light 2: #f4f2f2
+Grey light 3: #f0eeee
+Grey light 4: #ccc
+
+Grey dark 1: #333
+Grey dark 2: #777
+Grey dark 3: #999
+
+*/
+:root {
+  --color-primary: #eb2f64;
+  --color-primary-light: #ff3366;
+  --color-primary-dark: #ba265d;
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+  /* 
+ //////////////////////////////////// 
+ ////////// COLORS 
+ */
+  /* CODINGPHASE STYLE*/
+  --color-background-lightgrey: ##f7f7f7;
+  --color-background-gradient-1: #5e43fc;
+  --color-background-gradient-2: #c33be4;
+  --color-text-primary: #c0a5cb;
+  --color-text-secondary: #e0a2ef;
+  /* REGULAR COLORS*/
+  --color-text-black: #000000;
+  --color-text-white: #ffffff;
+  /* Overview */
+  --overview-text-grey: #535353;
+  /* 
+ //////////////////////////////////// 
+ ////////// DIMENSIONS 
+ */ }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: var(--color-text-white);
+  background-repeat: no-repeat;
+  min-height: 100vh; }
+
+.container {
+  max-width: 100vw;
+  margin: 0rem auto;
+  background-color: var(--color-grey-light-1);
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  /*    min-height: 50rem; FIXME dont use min height in production */ }
+
+.landing {
+  background-color: var(--color-background-lightgrey);
+  padding-top: 14rem;
+  padding: 6rem;
+  height: 100vh; }
+
+.exclusives {
+  min-height: 100vh;
+  background-image: linear-gradient(to right bottom, var(--color-background-gradient-1), var(--color-background-gradient-2)); }
+
+.overview {
+  min-height: 100vh;
+  background-color: var(--color-background-lightgrey); }
+
+.overview-images {
+  min-height: 100vh;
+  background-image: linear-gradient(to right bottom, var(--color-background-gradient-1), var(--color-background-gradient-2)); }
+
+.fifty-percent {
+  min-height: 100vh;
+  background-image: linear-gradient(to right bottom, var(--color-background-gradient-1), var(--color-background-gradient-2)); }
+
+.courses {
+  min-height: 100vh;
+  background-color: var(--color-background-lightgrey); }
+
+.select-plan {
+  min-height: 100vh;
+  background-color: var(--color-background-lightgrey); }
+
+.popular-bundles {
+  min-height: 100vh;
+  background-color: var(--color-background-lightgrey); }
+
+.credit {
+  min-height: 100vh;
+  background-image: linear-gradient(to right bottom, var(--color-background-gradient-1), var(--color-background-gradient-2)); }
+
+.landing h1 {
+  font-size: 6rem;
+  color: black; }
+
+.landing h1 span {
+  display: block;
+  color: var(--color-text-primary); }
+
+.landing-content {
+  display: flex;
+  margin-top: 4rem;
+  justify-content: flex-end;
+  align-items: flex-end;
+  min-height: 20vw;
+  max-height: 25vw;
+  position: relative; }
+  .landing-content__landing-button {
+    margin-bottom: 8rem;
+    margin-right: 70%;
+    border: none;
+    background-image: linear-gradient(to right bottom, var(--color-background-gradient-1), var(--color-background-gradient-2));
+    color: var(--color-text-white);
+    padding: 2rem 3rem;
+    font-weight: bold;
+    flex-basis: 200px;
+    flex-shrink: 0;
+    border-radius: 10vh; }
+  .landing-content__landing-image {
+    z-index: 2;
+    position: absolute;
+    right: 20rem;
+    height: 100%; }
+  .landing-content__landing-box-gradient {
+    z-index: 1;
+    position: absolute;
+    top: 6rem;
+    min-width: 30vw;
+    height: 100%;
+    max-height: 450px;
+    background-image: linear-gradient(to right bottom, var(--color-background-gradient-1), var(--color-background-gradient-2)); }
+
+/* 
+justify-content — controls alignment of all items on the main axis.
+
+align-items — controls alignment of all items on the cross axis.
+
+align-self — controls alignment of an individual flex item on the cross axis.
+
+align-content — described in the spec as for “packing flex lines”; controls space between flex lines on the cross axis.
+*/
+.exclusives {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .exclusives__exclusives-subtext {
+    margin-top: 6rem;
+    font-size: 2rem; }
+
+.exclusives__exclusives-title {
+  font-size: 6rem;
+  color: var(--color-text-white);
+  text-align: center;
+  margin-bottom: 3rem; }
+
+.exclusives-card-container {
+  display: flex;
+  justify-content: center; }
+
+.exclusives-card {
+  display: flex;
+  align-items: flex-end;
+  height: 300px;
+  width: 200px;
+  background-color: orangered; }
+  .exclusives-card__exclusives-card-overlay {
+    display: flex;
+    width: 100%;
+    height: 30%;
+    background-color: green;
+    align-items: center;
+    justify-content: center; }
+  .exclusives-card__exclusives-card-title {
+    color: var(--color-text-white);
+    text-align: center; }
+
+.exclusives-card:nth-child(n + 2) {
+  margin-left: 2rem; }
+
+.overview {
+  color: var(--overview-text-grey);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 6rem;
+  margin-right: 6rem; }
+  .overview__title {
+    margin-bottom: 2rem;
+    color: var(--color-text-primary);
+    font-size: 6rem; }
+  .overview__list {
+    list-style: none; }
+    .overview__list__item {
+      font-size: 2rem;
+      color: black; }
+    .overview__list__item:before {
+      display: inline-block;
+      content: " ";
+      background-image: url("/img/check.svg");
+      background-size: 1.5rem 1.5rem;
+      height: 1.5rem;
+      width: 1.5rem;
+      fill: green !important; }
+  .overview__exclusives-list {
+    list-style: none;
+    margin: 2rem 0; }
+    .overview__exclusives-list__item {
+      color: var(--color-text-primary);
+      font-size: 2rem; }
+    .overview__exclusives-list__item:before {
+      display: inline-block;
+      content: " ";
+      background-image: url("/img/star.svg");
+      background-size: 1.5rem 1.5rem;
+      height: 1.5rem;
+      width: 1.5rem; }
+  .overview__description {
+    margin-top: 2rem;
+    font-size: 2rem; }
+
+.fifty-percent {
+  color: var(--overview-text-grey); }
