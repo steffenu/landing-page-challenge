@@ -46,12 +46,14 @@
     position: absolute;
     right: 20rem;
     height: 100%;
+    border-radius: 1rem;
   }
 
   &__landing-box-gradient {
     z-index: 1;
     position: absolute;
     top: 6rem;
+    border-radius: 1rem;
 
     min-width: 30vw;
 
@@ -84,48 +86,68 @@ align-content — described in the spec as for “packing flex lines”; control
   justify-content: center; // vertical (becomes vertical)
   align-items: center;
 
+  &__exclusives-title {
+    font-size: 6rem;
+    color: var(--color-text-white);
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
   &__exclusives-subtext {
     margin-top: 6rem;
     font-size: 2rem;
   }
-}
 
-.exclusives__exclusives-title {
-  font-size: 6rem;
-  color: var(--color-text-white);
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.exclusives-card-container {
-  display: flex;
-  justify-content: center; //horizontal
-}
-
-.exclusives-card {
-  display: flex;
-  align-items: flex-end;
-
-  height: 300px;
-  width: 200px;
-  background-color: orangered;
-  &__exclusives-card-overlay {
+  &__card-container {
     display: flex;
-    width: 100%;
-    height: 30%;
-    background-color: green;
-    align-items: center;
-    justify-content: center;
-  }
+    justify-content: center; //horizontal
 
-  &__exclusives-card-title {
-    color: var(--color-text-white);
-    text-align: center;
-  }
-}
+    &__card {
+      display: flex;
+      align-items: flex-end;
 
-.exclusives-card:nth-child(n + 2) {
-  margin-left: 2rem;
+      height: 300px;
+      width: 200px;
+
+      background-image: linear-gradient(
+          to right bottom,
+          rgba(94, 67, 252, 0.8) 10%,
+          rgba(195, 59, 228, 0.1) 30%
+        ),
+        url(/img/excl1.png);
+
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+
+      /*       background-image: url("/img/excl3.png"),
+        linear-gradient(
+          to right bottom,
+          var(--color-background-gradient-1),
+          var(--color-background-gradient-2) 25%
+        ); */
+      &__card-overlay {
+        display: flex;
+        width: 100%;
+        height: 30%;
+        background-image: linear-gradient(
+          to top,
+          var(--color-background-gradient-1),
+          var(--color-background-gradient-2)
+        );
+        align-items: center;
+        justify-content: center;
+      }
+
+      &__card-title {
+        color: var(--color-text-white);
+        font-size: 1.8rem;
+        text-align: center;
+      }
+    }
+    &__card:nth-child(n + 2) {
+      margin-left: 2rem;
+    }
+  }
 }
 
 //////////////////////////////
@@ -191,11 +213,93 @@ align-content — described in the spec as for “packing flex lines”; control
 // 50 % OFF SECTION
 .fifty-percent {
   color: var(--overview-text-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__container {
+    // LINK https://stackoverflow.com/questions/39359828/center-one-flex-item-and-bottom-align-another
+    margin: auto;
+    box-shadow: 5px 5px 8px var(--color-background-gradient-1);
+    border-radius: 10vh;
+    padding: 2rem 4rem;
+    background-image: linear-gradient(
+      to bottom,
+      var(--color-background-gradient-1),
+      var(--color-background-gradient-2)
+    );
+
+    &__title {
+      text-align: center;
+      font-size: 4rem;
+      color: var(--color-text-white);
+    }
+    &__subtitle {
+      text-align: center;
+      font-size: 2rem;
+      color: var(--color-text-secondary);
+    }
+  }
+
+  &__container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__text {
+      color: white;
+      font-size: 1.5rem;
+    }
+    &__logo {
+    }
+    &__icon {
+      fill: white;
+      width: 2rem;
+    }
+  }
 }
 
 //////////////////////////////
 // COURSES SECTION
 
+.courses {
+  display: flex;
+  justify-content: center;
+  &__container {
+    max-width: 1000px;
+    max-height: 1000px;
+    display: flex;
+    justify-content: center;
+
+    align-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    &__card {
+      margin-bottom: 4rem;
+      display: flex;
+      flex: 0 0 300px;
+      height: 150px;
+
+      border-radius: 1rem;
+
+      justify-content: center;
+
+      background-image: linear-gradient(
+        to top,
+        rgba(94, 67, 252, 0.5),
+        rgba(195, 59, 228, 0.6)
+      );
+
+      &__title {
+        font-size: 2rem;
+        align-self: center;
+      }
+    }
+    &__card:nth-child(n + 1) {
+      margin-left: 3rem;
+    }
+  }
+}
 //////////////////////////////
 // OVERVIEW-IMAGES SECTION
 
