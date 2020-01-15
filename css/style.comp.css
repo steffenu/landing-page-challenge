@@ -129,6 +129,7 @@ body {
   max-height: 25vw;
   position: relative; }
   .landing-content__landing-button {
+    box-shadow: 5px 5px 8px var(--color-background-gradient-1);
     margin-bottom: 8rem;
     margin-right: 70%;
     border: none;
@@ -140,12 +141,14 @@ body {
     flex-shrink: 0;
     border-radius: 10vh; }
   .landing-content__landing-image {
+    box-shadow: 5px 5px 8px var(--color-background-gradient-1);
     z-index: 2;
     position: absolute;
     right: 20rem;
     height: 100%;
     border-radius: 1rem; }
   .landing-content__landing-box-gradient {
+    box-shadow: 10px 10px 8px var(--color-background-gradient-1);
     z-index: 1;
     position: absolute;
     top: 6rem;
@@ -181,6 +184,7 @@ align-content — described in the spec as for “packing flex lines”; control
     display: flex;
     justify-content: center; }
     .exclusives__card-container__card {
+      box-shadow: 10px 10px 8px var(--color-background-gradient-1);
       display: flex;
       align-items: flex-end;
       height: 300px;
@@ -220,7 +224,8 @@ align-content — described in the spec as for “packing flex lines”; control
     color: var(--color-text-primary);
     font-size: 6rem; }
   .overview__list {
-    list-style: none; }
+    list-style: none;
+    /*  */ }
     .overview__list__item {
       font-size: 2rem;
       color: black; }
@@ -292,6 +297,7 @@ align-content — described in the spec as for “packing flex lines”; control
     flex-wrap: wrap;
     width: 100%; }
     .courses__container__card {
+      box-shadow: 5px 5px 8px var(--color-background-gradient-1);
       margin-bottom: 4rem;
       display: flex;
       flex: 0 0 300px;
