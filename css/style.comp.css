@@ -42,6 +42,9 @@ Grey dark 3: #999
   --color-text-white: #ffffff;
   /* Overview */
   --overview-text-grey: #535353;
+  --shadow-dark: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.5);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+  --shadow-medy: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.5);
   /* 
  //////////////////////////////////// 
  ////////// DIMENSIONS 
@@ -141,14 +144,14 @@ body {
     flex-shrink: 0;
     border-radius: 10vh; }
   .landing-content__landing-image {
-    box-shadow: 5px 5px 8px var(--color-background-gradient-1);
+    box-shadow: var(--shadow-dark);
     z-index: 2;
     position: absolute;
     right: 20rem;
     height: 100%;
     border-radius: 1rem; }
   .landing-content__landing-box-gradient {
-    box-shadow: 10px 10px 8px var(--color-background-gradient-1);
+    box-shadow: var(--shadow-dark);
     z-index: 1;
     position: absolute;
     top: 6rem;
@@ -189,7 +192,7 @@ align-content — described in the spec as for “packing flex lines”; control
       align-items: flex-end;
       height: 300px;
       width: 200px;
-      background-image: linear-gradient(to right bottom, rgba(94, 67, 252, 0.8) 10%, rgba(195, 59, 228, 0.1) 30%), url("/img/excl1.png");
+      background-image: linear-gradient(to right bottom, rgba(94, 67, 252, 0.8) 10%, rgba(195, 59, 228, 0.1) 30%), url("../img/excl1.png");
       border-top-left-radius: 1rem;
       border-top-right-radius: 1rem;
       /*       background-image: url("/img/excl3.png"),
@@ -232,7 +235,7 @@ align-content — described in the spec as for “packing flex lines”; control
     .overview__list__item:before {
       display: inline-block;
       content: " ";
-      background-image: url("/img/check.svg");
+      background-image: url("../img/check.svg");
       background-size: 1.5rem 1.5rem;
       height: 1.5rem;
       width: 1.5rem;
@@ -246,7 +249,7 @@ align-content — described in the spec as for “packing flex lines”; control
     .overview__exclusives-list__item:before {
       display: inline-block;
       content: " ";
-      background-image: url("/img/star.svg");
+      background-image: url("../img/star.svg");
       background-size: 1.5rem 1.5rem;
       height: 1.5rem;
       width: 1.5rem; }
@@ -297,16 +300,72 @@ align-content — described in the spec as for “packing flex lines”; control
     flex-wrap: wrap;
     width: 100%; }
     .courses__container__card {
-      box-shadow: 5px 5px 8px var(--color-background-gradient-1);
+      box-shadow: var(--shadow-light);
       margin-bottom: 4rem;
       display: flex;
       flex: 0 0 300px;
       height: 150px;
       border-radius: 1rem;
       justify-content: center;
-      background-image: linear-gradient(to top, rgba(94, 67, 252, 0.5), rgba(195, 59, 228, 0.6)); }
+      /*       background-image: linear-gradient(
+        to top,
+        rgba(94, 67, 252, 1),
+        rgba(195, 59, 228, 1)
+      ); */
+      background-color: var(--color-background-gradient-2); }
       .courses__container__card__title {
         font-size: 2rem;
         align-self: center; }
     .courses__container__card:nth-child(n + 1) {
       margin-left: 3rem; }
+
+.overview-images {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .overview-images__container {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .overview-images__container__container1 {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column; }
+      .overview-images__container__container1__image {
+        box-shadow: var(--shadow-medy);
+        position: relative;
+        right: 10%;
+        margin: 5rem 0;
+        max-width: 40%; }
+    .overview-images__container__image-mid {
+      box-shadow: var(--shadow-medy);
+      border-radius: 10vh;
+      max-width: 25%; }
+    .overview-images__container__container2 {
+      display: flex;
+      flex-direction: column; }
+      .overview-images__container__container2__image {
+        box-shadow: var(--shadow-medy);
+        position: relative;
+        left: 10%;
+        margin: 5rem 0;
+        max-width: 40%; }
+
+.credit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .credit__title {
+    color: var(--color-text-secondary);
+    font-size: 3.1rem; }
+  .credit__subtitle {
+    color: var(--color-text-secondary);
+    font-size: 2rem; }
+  .credit__author {
+    margin-top: 2rem;
+    color: var(--color-text-secondary);
+    font-size: 2rem; }
+  .credit__icon {
+    width: 3rem;
+    fill: black; }
